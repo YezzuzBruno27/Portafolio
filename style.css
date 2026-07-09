@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  padding: 20px;
 }
 
 @media(max-width: 768px){
@@ -14,17 +15,14 @@
 
 /* 1. Definición de Variables Globales */
 :root {
-    /* Paleta de Colores - Tema Oscuro Moderno */
-    --color-fondo: #0F172A;       /* Azul marino muy oscuro para el main/body */
-    --color-tarjeta: #1E293B;     /* Tono elevado para los article y el header */
-    --color-acento: #6CABDD;      /* Azul cielo "Manchester City" para destacar */
-    --color-texto-principal: #F8FAFC; /* Blanco humo legible para títulos */
-    --color-texto-secundario: #94A3B8; /* Gris azulado para subtítulos y fechas */
-
-    /* Tipografía */
-    --fuente-principal: 'Montserrat', sans-serif;
-    --fuente-codigo: 'JetBrains Mono', monospace;
-}
+      --color-fondo: #0F172A;       
+      --color-tarjeta: #1E293B;     
+      --color-acento: #6CABDD;      
+      --color-texto-principal: #F8FAFC; 
+      --color-texto-secundario: #94A3B8; 
+      --fuente-principal: 'Montserrat', sans-serif;
+      --fuente-codigo: 'JetBrains Mono', monospace;
+    }
 
 /* 2. Reset básico para asegurar que todo se vea igual en todos los navegadores */
 * {
@@ -40,14 +38,80 @@ body {
     font-family: var(--fuente-principal);
 }
 
+
+
+
+ul{
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 20px;
+  background-color: var(--color-tarjeta);
+  padding: 20px;
+  font-weight: bold;
+}
+
+
+a{
+  color: var(--color-texto-principal);
+  text-decoration: none;
+}
+
+h1{
+  text-align: center;
+  margin: 50px 0 20px 0;
+}
+
+b{
+  color: var(--color-acento);
+}
+
+p{
+  color: var(--color-texto-secundario);
+  text-align: center;
+  margin: 20px 0;
+}
+
+button{
+  background-color: var(--color-acento);
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  font-family: var(--fuente-principal);
+  font-weight: bold;
+}
+
+.btn-download-cv-container{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  transition: transform 0.3s ease; /* Pequeña animación */
+}
+
+.btn-download-cv-container:hover{
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
+}
+
+h2{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
 /* Ejemplo de cómo aplicarías los colores a tus tarjetas de proyecto */
 article {
     background-color: var(--color-tarjeta);
     border: 1px solid transparent;
-    transition: border 0.3s ease; /* Pequeña animación */
+    transition: border 0.3s ease, transform 0.3s ease; /* Pequeña animación */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 /* Efecto hover: Al pasar el cursor, el borde toma el color de acento */
 article:hover {
     border: 1px solid var(--color-acento);
+    transform: translateY(-5px); /* Levanta ligeramente la tarjeta */
 }
+
+
