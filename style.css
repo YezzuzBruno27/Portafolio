@@ -114,4 +114,8 @@ article:hover {
     transform: translateY(-5px); /* Levanta ligeramente la tarjeta */
 }
 
-
+footer{
+  color: var(--color-texto-secundario);
+  margin-top: 50px;
+  font-size: 14px;
+}
